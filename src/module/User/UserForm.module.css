@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  width: 400px;
+}
+
+.input {
+  border: 1px solid violet;
+  width: 100%;
+}
+
+.btn-wrapper {
+  display: flex;
+  margin-top: 10px;
+  background-color: violet;
+  padding: 5px 10px;
+  margin-left: auto;
+  color: white;
+}
