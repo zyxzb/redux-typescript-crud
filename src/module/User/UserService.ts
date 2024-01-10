@@ -9,3 +9,8 @@ export const getUserList = async () => {
 export const createUser = async (data: IUserForm) => {
   return await axios.post<IUser>(APiConfig.user, data);
 };
+
+export const deleteUser = async (id: string | number) => {
+  const url = `${APiConfig.user}/${id}`;
+  return await axios.delete(url);
+};

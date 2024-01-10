@@ -8,10 +8,7 @@ interface IProps {
 
 const Modal = ({ title, children, onClose }: IProps) => {
   return (
-    <div
-      //  id='myModal'
-      className={Styles.modal}
-    >
+    <div className={Styles.modal}>
       <div className={Styles['modal-content']}>
         <button className={Styles.close} onClick={onClose}>
           &times;

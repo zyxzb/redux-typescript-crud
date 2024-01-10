@@ -3,12 +3,14 @@ import Input from '../../components/Input/Input';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { createUserAction, resetCreateListStatus } from './UserSlice';
 import { ApiStatus, IUserForm } from './User.type';
+import { useNavigate } from 'react-router-dom';
 
 import Style from './UserForm.module.css';
 
 const UserForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const navigate = useNavigate();
 
   const dispatch = useAppDispatch();
   const { createUserFormStatus } = useAppSelector((state) => state.user);
@@ -29,6 +31,7 @@ const UserForm = () => {
       setName('');
       setEmail('');
       dispatch(resetCreateListStatus());
+      navigate('/');
     }
   }, [createUserFormStatus, dispatch]);
 

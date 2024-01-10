@@ -11,39 +11,9 @@
       "email": "sam@example.com"
     },
     {
-      "id": "5d02",
-      "name": "Bartek",
-      "email": "bartek@gmail.com"
-    },
-    {
-      "id": "1e47",
-      "name": "Michał",
-      "email": "michdd@gmail.com"
-    },
-    {
-      "id": "45c7",
-      "name": "ddnj",
-      "email": "dcnd@gmail.com"
-    },
-    {
       "id": "7c70",
       "name": "Bartek Test",
       "email": "test@gmail.com"
-    },
-    {
-      "id": "672c",
-      "name": "",
-      "email": ""
-    },
-    {
-      "id": "d846",
-      "name": "",
-      "email": ""
-    },
-    {
-      "id": "99b6",
-      "name": "Bartek",
-      "email": "bartekzarzyk@cdc.com"
     }
   ]
 }

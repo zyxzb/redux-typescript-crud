@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { ApiStatus, IUser } from './User.type';
-import { getUserListAction } from './UserSlice';
+import { getUserListAction, deleteUserAction } from './UserSlice';
 import Modal from '../../components/Modal/Modal';
 import { createPortal } from 'react-dom';
 
@@ -46,7 +46,10 @@ const UserList = () => {
                   <button className='border px-2 py-1 bg-white text-black'>
                     Edit
                   </button>
-                  <button className='border px-2 py-1 bg-red-600 text-white'>
+                  <button
+                    className='border px-2 py-1 bg-red-600 text-white'
+                    onClick={() => dispatch(deleteUserAction(item.id))}
+                  >
                     Delete
                   </button>
                 </div>
