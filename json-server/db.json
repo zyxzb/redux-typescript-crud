@@ -1,19 +1,14 @@
 {
   "user": [
     {
-      "id": 1,
-      "name": "John",
-      "email": "john@example.com"
-    },
-    {
-      "id": 2,
+      "id": "2sa",
       "name": "Sam",
       "email": "sam@example.com"
     },
     {
-      "id": "7c70",
-      "name": "Bartek Test",
-      "email": "test@gmail.com"
+      "name": "0.001eeefefefeuu66yhy",
+      "email": "0.001@gmai.com",
+      "id": "0f81"
     }
   ]
 }

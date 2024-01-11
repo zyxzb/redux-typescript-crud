@@ -1,5 +1,3 @@
-import Style from './Input.module.css';
-
 interface InputProps {
   label: string;
   value: string;
@@ -9,13 +7,13 @@ interface InputProps {
 
 const Input = ({ label, value, type = 'text', onChange }: InputProps) => {
   return (
-    <div className={Style.container}>
+    <div className='m-2'>
       <label htmlFor=''>{label}:</label>
       <div className=''>
         <input
           type={type}
           value={value}
-          className={Style.input}
+          className='border border-1 w-full h-10 p-2 border-black'
           onChange={(e) => onChange(e.target.value)}
         />
       </div>

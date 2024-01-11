@@ -14,3 +14,8 @@ export const deleteUser = async (id: string | number) => {
   const url = `${APiConfig.user}/${id}`;
   return await axios.delete(url);
 };
+
+export const updateUser = async (id: string | number, data: IUserForm) => {
+  const url = `${APiConfig.user}/${id}`;
+  return await axios.put(url, data);
+};

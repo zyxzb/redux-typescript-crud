@@ -1,8 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-import Style from './GlobalNavStyle.module.css';
-
-const GlobalNav = () => {
+const Nav = () => {
   const navLinks = [
     {
       to: '/',
@@ -15,12 +13,14 @@ const GlobalNav = () => {
   ];
 
   return (
-    <nav className={Style.container}>
+    <nav className='flex gap-5 '>
       {navLinks.map((link) => (
         <NavLink
           key={link.title}
           to={link.to}
-          className={({ isActive }) => (isActive ? Style.active : '')}
+          className={({ isActive }) =>
+            isActive ? 'underline font-semibold  underline-offset-2' : ''
+          }
         >
           {link.title}
         </NavLink>
@@ -29,4 +29,4 @@ const GlobalNav = () => {
   );
 };
 
-export default GlobalNav;
+export default Nav;

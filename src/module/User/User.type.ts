@@ -1,5 +1,5 @@
 export interface IUser {
-  id: number;
+  id: number | string;
   name: string;
   email: string;
 }
@@ -15,6 +15,7 @@ export interface IUserState {
   list: IUser[];
   listStatus: ApiStatus;
   createUserFormStatus: ApiStatus;
+  updateUserFormStatus: ApiStatus;
 }
 
 export const defaultList: IUser[] = [

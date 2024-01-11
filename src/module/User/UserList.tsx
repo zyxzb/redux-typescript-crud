@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react';
-import { useAppDispatch, useAppSelector } from '../../app/hooks';
+import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { ApiStatus, IUser } from './User.type';
 import { getUserListAction, deleteUserAction } from './UserSlice';
 import Modal from '../../components/Modal/Modal';
 import { createPortal } from 'react-dom';
+import { useNavigate } from 'react-router-dom';
 
 const UserList = () => {
   const [userDataToView, setUserDataToView] = useState<IUser | null>(null);
   const { list, listStatus } = useAppSelector((state) => state.user);
 
+  const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -31,7 +33,7 @@ const UserList = () => {
         )}
         {listStatus === ApiStatus.ideal &&
           list.map((item) => (
-            <tr>
+            <tr key={item.id}>
               <td>{item.id}</td>
               <td>{item.name}</td>
               <td>{item.email}</td>
@@ -43,7 +45,10 @@ const UserList = () => {
                   >
                     View
                   </button>
-                  <button className='border px-2 py-1 bg-white text-black'>
+                  <button
+                    className='border px-2 py-1 bg-white text-black'
+                    onClick={() => navigate('/edit/' + item.id)}
+                  >
                     Edit
                   </button>
                   <button
