@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
-
-import ViteSvg from '../../public/vite.svg';
-import Nav from './Nav';
+import { Nav } from '.';
+import ViteSvg from '/vite.svg';
 
 const Header = () => {
   return (

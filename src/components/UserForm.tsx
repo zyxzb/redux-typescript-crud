@@ -1,14 +1,16 @@
 import { FormEvent, useEffect, useState } from 'react';
-import Input from '../../components/Input';
-import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
+import Input from './Input';
+import { useAppDispatch, useAppSelector } from '../hooks/hooks';
+
 import {
   createUserAction,
   resetCreateListStatus,
   updateUserAction,
-} from './UserSlice';
-import { ApiStatus, IUserForm } from './User.type';
+} from '../module/User/UserSlice';
+
+import { ApiStatus, IUserForm } from '../module/User/User.type';
 import { useNavigate, useParams } from 'react-router-dom';
-import { toastInfo } from '../../utils/utils';
+import { toastInfo } from '../utils/utils';
 
 interface IProps {
   isEditForm?: boolean;

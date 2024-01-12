@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
-import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
-import { ApiStatus, IUser } from './User.type';
-import { getUserListAction, deleteUserAction } from './UserSlice';
-import Modal from '../../components/Modal/Modal';
 import { createPortal } from 'react-dom';
 import { useNavigate } from 'react-router-dom';
+
+import { Modal } from '.';
+
+import { useAppDispatch, useAppSelector } from '../hooks/hooks';
+import { ApiStatus, IUser } from '../module/User/User.type';
+import { getUserListAction, deleteUserAction } from '../module/User/UserSlice';
 
 const UserList = () => {
   const [userDataToView, setUserDataToView] = useState<IUser | null>(null);

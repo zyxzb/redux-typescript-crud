@@ -1,6 +1,13 @@
+// add paths from this file
+
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { ApiStatus, IUserForm, IUserState } from './User.type';
-import { createUser, deleteUser, getUserList, updateUser } from './UserService';
+import { ApiStatus, IUserForm, IUserState } from '../../module/User/User.type';
+import {
+  createUser,
+  deleteUser,
+  getUserList,
+  updateUser,
+} from '../../module/User/UserService';
 import { toastSuccess, toastError } from '../../utils/utils';
 
 const initialState: IUserState = {
