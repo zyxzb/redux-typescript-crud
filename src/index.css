@@ -3,18 +3,22 @@
 @tailwind utilities;
 
 table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+  @apply w-full;
 }
 
 td,
 th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+  @apply border border-2 border-white p-2 text-left;
+}
+
+tr:nth-child(1) {
+  @apply bg-violet-500 text-white;
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  @apply bg-slate-300;
+}
+
+tr:not(:first-child):nth-child(odd) {
+  @apply bg-slate-400;
 }

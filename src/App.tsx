@@ -1,9 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
-import { Layout } from './components';
-
-import UserList from './components/UserList';
-import UserForm from './components/UserForm';
+import { Layout, UserList, UserForm } from './components';
 
 const App = () => {
   return (

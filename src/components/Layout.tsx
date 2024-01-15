@@ -8,13 +8,13 @@ const Layout = () => {
   return (
     <>
       <Header />
-      <main className='w-full max-w-7xl mx-auto px-10'>
-        <h1 className='text-3xl my-10 lg:my-20 font-extrabold'>
+      <main className='mx-auto w-full max-w-7xl px-10'>
+        <h1 className='my-10 text-3xl font-extrabold lg:my-20'>
           React, Redux, Typesctipt, Tailwind, Json Server - CRUD APP
         </h1>
         <Outlet />
       </main>
-      <ToastContainer />
+      <ToastContainer position='bottom-right' />
     </>
   );
 };

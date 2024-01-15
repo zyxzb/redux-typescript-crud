@@ -18,19 +18,6 @@ export interface IUserState {
   updateUserFormStatus: ApiStatus;
 }
 
-export const defaultList: IUser[] = [
-  {
-    id: 1,
-    name: 'Bob',
-    email: 'bob@example.com',
-  },
-  {
-    id: 2,
-    name: 'Sam',
-    email: 'sam@example.com',
-  },
-];
-
 export interface IUserForm {
   name: string;
   email: string;

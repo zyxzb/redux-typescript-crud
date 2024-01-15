@@ -19,7 +19,7 @@ const Nav = () => {
           key={link.title}
           to={link.to}
           className={({ isActive }) =>
-            isActive ? 'underline font-semibold  underline-offset-2' : ''
+            isActive ? 'font-semibold underline underline-offset-2' : ''
           }
         >
           {link.title}

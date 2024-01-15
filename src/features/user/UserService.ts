@@ -1,6 +1,11 @@
 import axios from 'axios';
-import APiConfig from '../../service/ApiConfig';
 import { IUser, IUserForm } from './User.type';
+
+const baseUrl = 'http://localhost:8000/';
+
+const APiConfig = {
+  user: `${baseUrl}user`,
+};
 
 export const getUserList = async () => {
   return await axios.get<IUser[]>(APiConfig.user);

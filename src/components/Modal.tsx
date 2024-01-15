@@ -6,12 +6,12 @@ interface IProps {
 
 const Modal = ({ title, children, onClose }: IProps) => {
   return (
-    <div className='fixed z-10 inset-0 bg-black/50 backdrop-blur-sm grid place-items-center'>
-      <div className='bg-white p-5 md:p-10 w-2/3 md:w-1/2'>
-        <div className='flex justify-between items-center mb-5'>
-          <h2 className='font-bold text-2xl'>{title}</h2>
+    <div className='fixed inset-0 z-10 grid place-items-center bg-black/50 backdrop-blur-sm'>
+      <div className='relative w-2/3 bg-white p-5 md:w-1/2 md:p-10'>
+        <div className='mb-5 flex items-center justify-between'>
+          <h2 className='text-2xl font-bold'>{title}</h2>
           <button
-            className='text-gray-500 text-4xl hover:text-black'
+            className='absolute -right-[20px] -top-[20px] flex h-[40px] w-[40px] items-center justify-center rounded-full bg-black text-center text-xl text-white hover:text-gray-500'
             onClick={onClose}
           >
             &times;

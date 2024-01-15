@@ -6,9 +6,9 @@ import {
   createUserAction,
   resetCreateListStatus,
   updateUserAction,
-} from '../module/User/UserSlice';
+} from '../features/user/UserSlice';
 
-import { ApiStatus, IUserForm } from '../module/User/User.type';
+import { ApiStatus, IUserForm } from '../features/user/User.type';
 import { useNavigate, useParams } from 'react-router-dom';
 import { toastInfo } from '../utils/utils';
 
@@ -64,12 +64,12 @@ const UserForm = ({ isEditForm = false }: IProps) => {
   }, [isEditForm, id, list]);
 
   return (
-    <div className='flex justify-center'>
-      <form className='w-[400px]' onSubmit={handleSubmit}>
+    <div className='flex justify-center '>
+      <form className='flex w-[400px] flex-col gap-4' onSubmit={handleSubmit}>
         <Input label='Name' value={name} type='text' onChange={setName} />
         <Input label='Email' value={email} type='email' onChange={setEmail} />
         <button
-          className='flex mt-5 px-4 py-2 bg-violet-500 ml-auto text-white'
+          className='ml-auto flex bg-violet-500 px-4 py-2 text-white transition hover:bg-violet-400'
           disabled={
             updateUserFormStatus === ApiStatus.loading ||
             createUserFormStatus === ApiStatus.loading
